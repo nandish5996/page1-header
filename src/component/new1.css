@@ -7,7 +7,8 @@
     height: 98vh;
     display: flex;
     flex-direction: column;
-    gap: 5px
+    gap: 5px;
+    font-family: sans-serif;
 }
 .navbar{
     
@@ -15,7 +16,7 @@
     flex-direction: row;
     margin-left: 5%;
     margin-right: 5%;
-    gap: 5px;
+    gap: 10px;
 }
 .nlogo{
     flex: 1;
@@ -23,20 +24,21 @@
 }
 .nlogs{
      margin-top: 4px;
-    height: 40px;
-    width: 35px;
+    height: 50px;
+    width: 50px;
 }
 .nlogname{
     padding-top: 5px;
     font-size: 20px;
-    margin-top: 5px;
+    margin-top: 10px;
     height: 32px;
     width: auto;
 }
 .nlinks{
-    gap: 10px;
+    gap: 20px;
     margin-left: 50px;
     display: flex;
+    margin-top: 3px;
      
 
 }
@@ -51,7 +53,7 @@
 .nbutton{
     flex-wrap: wrap;
     display: flex;
-    gap: 5px;
+    gap: 10px;
 }
 .login{
     flex: 1;
@@ -61,6 +63,13 @@
     justify-content: center;
     align-items: center;
     border-radius: 4px;
+    border: 1px solid rgb(207, 202, 202);
+    width: 60px;
+    margin-top: 2px;
+}
+.login:hover{
+    transition: 1s ease;
+    transform: scale(1.1);
 }
 
 
@@ -69,8 +78,16 @@
     align-items: center;
     height: 32px;
     display: flex;
-    background: linear-gradient(rgb(214, 26, 214));
+    background: linear-gradient(to right , rgba(93, 0, 241, 0.733) , rgb(241, 5, 241) );
     border-radius: 4px;
+    width: 70px;
+     margin-top: 2px;
+     border: none;
+}
+
+.signup:hover{
+    transition: 1s ease;
+    transform: scale(1.1);
 }
 
 .middle{
@@ -117,13 +134,18 @@
 .ma1a{
     margin-top: 10px;
     height: 35px;
-    width: auto;
+    width: 300px;
     border-radius: 50px;
     background-color: rgba(247, 246, 246, 0.199);
     color: white;
     align-content: center;
     justify-content: center;
+    font-size: 13px;
     
+}
+.stare{
+    font-size: 15px;
+    padding-left: 8px;
 }
 .ma2{
     flex: 2;
@@ -148,8 +170,10 @@
     border-radius: 4px;
     display: flex;
 }
+
 .sl{
     width: 8%;
+    margin-left: 2px;
 }
 
 .sln{
@@ -160,11 +184,11 @@
     border: none;
     height: max-content;
     width: 95%;
-    height: 80%;
+    height: 100%;
 }
 
 .search{
-     height: 33px;
+     height: 30px;
      margin-top: 2px;
     margin-left: 2px;
     width: 15%;
@@ -174,10 +198,17 @@
 .search button{
     height: 100%;
     width: 100%;
-    background-color: rgba(145, 10, 163, 0.808);
+     background: linear-gradient(to right , rgba(93, 0, 241, 0.733) , rgb(241, 5, 241) );
+     border: none;
     color: white;
     border-radius: 4px;
+    outline: none;
 }
+.search:hover{
+    transition: 1s ease-in-out;
+    transform: scale(1.1);
+}
+
 .ma5{
     flex: 1;
     align-items: center;
@@ -193,6 +224,12 @@
     height: 40%;
   background-color: rgba(247, 246, 246, 0.096);
     color: white;
+    width: 60px;
+}
+.actors:hover{
+    transition: 0.5s ease-in;
+    transform: scale(1.0);
+    background-color: rgba(255, 255, 255, 0.295);
 }
 .influencers{
     border-radius: 4px;
@@ -201,6 +238,12 @@
     height: 40%; 
   background-color: rgba(247, 246, 246, 0.096);
     color: white;
+    width: 80px;
+}
+.influencers:hover{
+    transition: 0.5s ease-in;
+    transform: scale(1.0);
+    background-color: rgba(255, 255, 255, 0.295);
 }
 .singers{
      border-radius: 4px;
@@ -209,6 +252,12 @@
     height: 40%;
       background-color: rgba(247, 246, 246, 0.096);
     color: white;
+    width: 60px;
+}
+.singers:hover{
+    transition: 0.5s ease-in;
+    transform: scale(1.0);
+    background-color: rgba(255, 255, 255, 0.295);
 }
 .comedians{
      border-radius: 4px;
@@ -217,6 +266,12 @@
     height: 40%;
     background-color: rgba(247, 246, 246, 0.096);
     color: white;
+    width: 80px;
+}
+.comedians:hover{
+    transition: 0.5s ease-in;
+    transform: scale(1.0);
+    background-color: rgba(255, 255, 255, 0.295);
 }
 .mb{
     flex: 2;
@@ -238,6 +293,16 @@ height: 100%;
     font-weight: bold;
 }
 
-.login a, .signup a{
+.login a{
     text-decoration: none;
+    color: black;
+}
+.signup a{
+    text-decoration: none;
+    color: white;
+}
+.login img{
+    position: relative;
+    height: 50%;
+    width: 25%;
 }

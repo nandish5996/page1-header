@@ -1,8 +1,9 @@
-import './new.css'
+import './new1.css'
 import img1 from '../assets/star.png'
 import img2 from  '../assets/srch.svg'
+import img3 from '../assets/user.svg'
 
-function New() {
+function New1() {
 
 
   return (
@@ -20,7 +21,9 @@ function New() {
       <div className='nbutton'>
         
           
-          <button className='login'> <a href="">Login</a></button>
+          <button className='login'>
+            <img src={img3}/>
+              <a href="">Login</a></button>
           <button className='signup'><a href="">Sign Up</a></button>
     
         
@@ -30,7 +33,7 @@ function New() {
       <div className='middlem'>
         <div className='ma'>
           <div className='ma1'>
-            <div className='ma1a'>⭐ Trusted by 100,000+ happy customers</div>
+            <div className='ma1a'><span className='stare'>⭐</span> Trusted by 100,000+ Happy Customers</div>
           </div>
            <div className='ma2'><span className='ae1'>Book Personalized <br /> Video Messages From  <br />Your </span><span className='ae2'>Favourite</span><br /><span className='ae3'>Celebrities</span> </div>
             <div className='ma3'>For Birthdays, Anniversaries, Best Wishes & More. Make any <br /> occasion unfoergettable with a personal message from the stars.</div>
@@ -56,4 +59,4 @@ function New() {
     </>
       )
 }
-export default New
+export default New1
