@@ -1,0 +1,200 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /* Added for better layout control */
+}
+
+.main {
+    max-width: 100%;
+    height: 100vh; /* Changed from 98vh to 100vh for full screen */
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+}
+
+/* --- NAVBAR STYLES --- */
+.navbar {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 5%;
+    gap: 10px;
+    align-items: center;
+}
+
+.nlogo {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.nlogs {
+    height: 40px;
+    width: 40px;
+}
+
+.nlogname {
+    font-size: 22px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.nlinks {
+    display: flex;
+    gap: 25px;
+    margin: 0 50px;
+    color: #333;
+}
+
+.nbutton {
+    display: flex;
+    gap: 10px;
+}
+
+.login, .signup {
+    height: 38px;
+    padding: 0 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.login {
+    background: white;
+    border: 1px solid #ddd;
+}
+
+.signup {
+    background: linear-gradient(to right, rgba(93, 0, 241, 0.733), rgb(241, 5, 241));
+    border: none;
+    color: white;
+}
+
+.login:hover, .signup:hover {
+    transform: scale(1.05);
+}
+
+/* --- HERO / MIDDLE SECTION STYLES --- */
+.middle {
+    flex: 1;
+    position: relative; /* Container for absolute slider */
+    overflow: hidden;
+    display: flex;
+}
+
+/* THE SLIDER ENGINE */
+.bg-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Behind the text */
+}
+
+.bg-track {
+    display: flex;
+    width: 500%; /* 5 slides total (3 original + 2 duplicates) */
+    height: 100%;
+    animation: slideInfinite 25s linear infinite; /* Control speed here */
+}
+
+.bg-slide {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/* Apply your specific Linear Gradient overlay to every slide */
+.bg-slide::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, 
+        rgba(0, 0, 0, 0.85) 0%,
+        rgba(0, 0, 0, 0.75) 25%,
+        rgba(0, 0, 0, 0.55) 45%,
+        rgba(0, 0, 0, 0.25) 65%,
+        rgba(0, 0, 0, 0.05) 85%
+    );
+}
+
+/* Assigning your 3 Background Images */
+.slide1 { background-image: url('../assets/back1.png'); }
+.slide2 { background-image: url('../assets/back2.png'); } 
+.slide3 { background-image: url('../assets/back3.png'); }
+
+/* Animation Keyframes for Infinite Loop */
+@keyframes slideInfinite {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-60%); } /* Resets seamlessly after 3 slides */
+}
+
+/* --- CONTENT ON TOP OF SLIDER --- */
+.middlem {
+    flex: 1;
+    margin: 0 5%;
+    display: flex;
+    align-items: center;
+    color: white; /* Text color for dark background */
+    z-index: 2;
+}
+
+.ma { display: flex; flex-direction: column; gap: 20px; }
+
+.ma1a {
+    padding: 8px 15px;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    width: fit-content;
+}
+
+.ma2 { font-size: 42px; line-height: 1.2; }
+.ae2 { color: #8e44ad; font-weight: bold; }
+.ae3 { color: #e91e63; font-weight: bold; }
+
+.ma3 { color: #ccc; font-size: 16px; }
+
+.ma4 { display: flex; gap: 10px; }
+
+.searchbar {
+    background: white;
+    border-radius: 6px;
+    display: flex;
+    flex: 1;
+    padding: 5px 15px;
+    max-width: 400px;
+}
+
+.sl img { width: 20px; height: 20px; margin-top: 5px; }
+.sln input { border: none; outline: none; width: 100%; padding: 5px; }
+
+.search button {
+    padding: 10px 25px;
+    background: linear-gradient(to right, #5d00f1, #f105f1);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.ma5 { display: flex; gap: 10px; align-items: center; }
+.ma5 button {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: white;
+    padding: 5px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.ma5 button:hover { background: rgba(255,255,255,0.3); }

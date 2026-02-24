@@ -30,6 +30,17 @@ function New1() {
       </div>
     </div>
     <div className='middle'>
+       <div className="bg-slider">
+          <div className="bg-track">
+            <div className="bg-slide slide1"></div>
+            <div className="bg-slide slide2"></div>
+            <div className="bg-slide slide3"></div>
+            {/* Duplicates to create a seamless infinite loop */}
+            <div className="bg-slide slide1"></div>
+            <div className="bg-slide slide2"></div>
+          </div>
+        </div>
+
       <div className='middlem'>
         <div className='ma'>
           <div className='ma1'>
@@ -39,7 +50,7 @@ function New1() {
             <div className='ma3'>For Birthdays, Anniversaries, Best Wishes & More. Make any <br /> occasion unfoergettable with a personal message from the stars.</div>
              <div className='ma4'>
               <div className='searchbar'>
-                <div className='sl'><img src={img2} /></div>
+                <div className='sl'><img src={img2} /></div> 
                 <div className='sln'><input type="text" placeholder='Search for a celebrity...'/></div>
               </div>
               <div className='search'><button>Search</button></div>
@@ -52,7 +63,7 @@ function New1() {
                 <button className='comedians'>Comedians</button>
               </div>
         </div>
-        <div className='mb'></div>
+        
       </div>
     </div>
    </div>
